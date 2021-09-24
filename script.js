@@ -144,6 +144,20 @@ function showYouWon(){
   // *CODE GOES BELOW HERE *
   let dialog = getDialog('won',text);
   document.getElementById("result").innerHTML = dialog;
+
+  var btn = document.createElement("BUTTON");
+
+    btn.innerHTML = "Get Your Treasure Here!"
+
+    btn.classList.add("btn", "btn-lg", "btn-warning", "success");
+
+    btn.addEventListener("click",URL);
+
+    document.getElementById('result').appendChild(btn);
+}
+
+function URL(){
+  window.open( "https://drive.google.com/drive/folders/1aUzyVL39pv0QH-azlYrm5VFW_iub9Yld?usp=sharing");
 }
 
 function showNumberAbove(){
@@ -169,3 +183,4 @@ function showNumberBelow(){
   let dialog = getDialog('warning',text);
   document.getElementById("result").innerHTML = dialog;
 }
+
